@@ -1,0 +1,76 @@
+.panel {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+.nav_indicators {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #ccc;
+}
+
+.nav_indicators ul {
+    height: 100%;
+}
+
+.nav_indicators ul > li {
+    height: 25%;
+    display: table;
+    width: 100%;
+}
+
+.nav_indicators ul > li > a {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nav_indicators ul > li > a:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+
+.nav_indicators ul > li > a:before {
+    content: '';
+    height: 100%;
+    width: 1px;
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+    position:  absolute;
+    left:  0;
+    right:  0;
+    top: 0;
+}
+
+.nav_indicators ul > li:first-child > a:before {
+    height:  50%;
+    top: auto;
+    bottom: 0;
+}
+
+.nav_indicators ul > li:last-child > a:before {
+    height:  50%;
+    top: 0;
+    bottom: auto;
+}
